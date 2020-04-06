@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1 {
@@ -52,7 +46,7 @@ namespace WindowsFormsApp1 {
                 Thread.Sleep(10);
                 button2.Visible = ran.Next(0, 3) == 0 ? true : false;
             }
-            
+
         }
 
         private void btnSubmit_Click(object sender, EventArgs e) {
@@ -60,16 +54,16 @@ namespace WindowsFormsApp1 {
             int answer;
             //answer = int.Parse(textBox1.Text);
             int.TryParse(textBox1.Text, out answer); // NumberFormatException 발생시 알아서 예외처리 해준다. 예외 발생시 0으로 out. 메소드 자체는 불린값 반환
-            if(quizNum == answer) {
+            if (quizNum == answer) {
                 label1.Text = "정답입니다!!!";
-            } else if(quizNum > answer) {
+            } else if (quizNum > answer) {
                 label1.Text = $"\n{answer} 보다 큰 숫자입니다\n";
                 label2.Text += label1.Text;
             } else {
                 label1.Text = $"\n{answer} 보다 작은 숫자입니다" + Environment.NewLine; // 운영체제와 상관없이 항상 줄바꿈 가능
                 label2.Text += label1.Text;
             }
-            
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e) {
