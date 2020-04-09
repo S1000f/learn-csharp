@@ -9,7 +9,6 @@ namespace WindowsFormsApp1 {
         Button button2;
         int num = 0;
         int quizNum;
-        int reset;
 
         public Form1() {
             InitializeComponent();
@@ -29,7 +28,7 @@ namespace WindowsFormsApp1 {
             button_test.Text = String.Format("behold this {0}", 30 + 5);
 
             Random random = new Random();
-            quizNum = random.Next(1, 300);
+            quizNum = random.Next(1, 100);
 
         }
 
@@ -75,7 +74,6 @@ namespace WindowsFormsApp1 {
 
         private void timer1_Tick(object sender, EventArgs e) {
             label4.Text = "Tok";
-            reset = 1;
         }
     }
 }
