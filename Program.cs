@@ -61,9 +61,9 @@ namespace WindowsFormsApp1 {
 
         [STAThread]
         static void Main() {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form6_thread());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form7());
 
             Students studentList = new Students();
             studentList.Add(new Student("a", 4.5));
